@@ -708,7 +708,7 @@ HTML_TEMPLATE = """
     </script>
 </body>
 </html>
-""" ",
+""",
         "welcome": "I'm Simon. Provide the property address and details for a professional valuation report."
     },
     "Decoy Troy (Community)": {
@@ -985,4 +985,5 @@ if prompt := st.chat_input("Type your message..."):
             st.markdown(response.text)
             st.session_state.messages.append({"role": "assistant", "content": response.text})
         except Exception as e:
+
             st.error(f"Error: {str(e)}")
