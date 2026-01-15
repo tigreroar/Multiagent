@@ -126,7 +126,7 @@ if prompt := st.chat_input("Type your message here..."):
 
         # Gemini Call
         model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash",
+            model_name="gemini-2.5-flash",
             system_instruction=agent_data["system"]
         )
 
@@ -143,3 +143,4 @@ if prompt := st.chat_input("Type your message here..."):
             st.session_state.messages.append({"role": "assistant", "content": response.text})
         except Exception as e:
             st.error(f"Error generating response: {e}")
+
